@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Miami Polyclinic — Premium Care</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+
+    <header class="topbar">
+      <div>
+        <div class="brand">MIAMI</div>
+        <div class="brand-sub">POLYCLINIC</div>
+      </div>
+      <div class="topbar-right">
+        <span>Premium Care</span>
+        <span class="status-dot"></span>
+        <span>Data-ready interface</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">MEMBERSHIP MANAGEMENT</p>
+          <h1>Premium Care</h1>
+          <p class="hero-copy">
+            Six membership cards are ready to be populated from your Excel dataset.
+            For now, this interface uses placeholder data only.
+          </p>
+        </div>
+
+        <div class="controls">
+          <label for="memberSearch">Search member</label>
+          <input id="memberSearch" type="search" placeholder="Member name or member number..." />
+        </div>
+      </section>
+
+      <section class="member-grid" id="memberGrid"></section>
+
+      <section class="detail-section" id="detailSection" hidden>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">SELECTED MEMBER</p>
+            <h2 id="detailTitle">Member</h2>
+          </div>
+          <button class="close-btn" id="closeDetail">Close</button>
+        </div>
+
+        <div class="detail-grid">
+          <div class="membership-card large-card">
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <div class="card-logo">
+                <div class="miami-word">MIAMI</div>
+                <div class="miami-sub">POLYCLINIC</div>
+              </div>
+
+              <div class="premium-mark">the<span>Premium</span><small>care</small></div>
+
+              <div class="member-main">
+                <div class="member-number" id="detailNumber"></div>
+                <div class="member-name" id="detailName"></div>
+              </div>
+
+              <div class="member-meta">
+                <div>
+                  <span>Member Since</span>
+                  <strong id="detailSince"></strong>
+                </div>
+                <div>
+                  <span>Valid Thru</span>
+                  <strong id="detailValid"></strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="benefits-panel">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow">MEMBER BENEFITS</p>
+                <h3>Entitlements</h3>
+              </div>
+              <div class="qr-placeholder" id="qrPlaceholder">QR</div>
+            </div>
+            <div class="benefits-table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Service</th>
+                    <th>Benefit</th>
+                  </tr>
+                </thead>
+                <tbody id="benefitsBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Miami Polyclinic</span>
+      <span>Premium Care Interface</span>
+      <span>Excel connection can be added later</span>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
